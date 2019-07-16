@@ -2,11 +2,13 @@ language: ruby
 cache:
   -bundler
 before_script:
-
+  -bundle exec rake db:create
+  -bundle exec rake db:migrate
+  -bundle exec rake assets:precompile
 deploy:
   provider: heroku
   api_key:
     secure: "lSzwGnWdI85Q22vibuo9g5CZfb+AWL6CmLLxK5Y9OWUGYSXeB1LgVk5BUTexvCnHsfrQZSSDgBtneqVeZhAtwBX1vMJ03zPhChXoDwwuff+NLR7TL10QcHcbFGv1SWiGiDjz5fij/BHsyLi64x8wwDFVGMIBgkc9YsLs4DsHHQUNw9MrSFFyRlPZK7fqEkK3N5WutbOp9oGoQomgNPoQ2piWzlAMfvK0/GqyaWEDvO8NHdKLfnnOFEpaJgVGKhhYX+pT66zkp4mlgc9DULXr+RYsNbmLPzeztOSupAVb8F+aLe/iEp4+VVbb+r21wDdyJfntVkZmV9BxvZTEO7m/oFofNWYqyypKKfdMV6s2x6BVzJpR0gFLzNQDYd7vEeClGRkGn91gqERWfX25E8kq5hD4cYrPCo5UYwRSNIQb23SoH2+87POz3rwjZ5ilsRkD8BitkTuCZPnj903QbX6l/w/JCTP7FZu5JBpkZ19F+3ibVK7HLzAvv/v9O6JOttZbcZtLji6yBTaKF8WqotCrpKrUQWd+bPvUo5/3f4qwP3nuQUPduoF/3wuZhffEtiHrOQdTEE3xeN5PFtCefA6LDrzNr4sY4w6Ya8Q9/D91RDVldWAu3rv1+e8n+DQyWPZmuXaq2MdAdZHHIwA0XnPabUCZE3wvLljSJtQiZfPRGn0="
-    app: Acebook---Data-Thieves
+    app: acebook-data-thieves
 on:
   repo: carlfjones/Acebook---Data-Thieves
