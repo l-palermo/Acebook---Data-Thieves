@@ -29,10 +29,13 @@ RSpec.describe UsersController, type: :controller do
   # User. As you add validations to User, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { name: 'joe', surname: 'blogs', encrypted_email: 'joeblogs@gmail.com', encrypted_password: 'joeblogs22' }
+    # skip("Add a hash of attributes valid for your model")
   }
 
   let(:invalid_attributes) {
+
+    # { name: 22, surname: 33, encrypted_email: 22, encrypted_password: 44 }
     skip("Add a hash of attributes invalid for your model")
   }
 
@@ -46,6 +49,7 @@ RSpec.describe UsersController, type: :controller do
       user = User.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_success
+      # p response
     end
   end
 
