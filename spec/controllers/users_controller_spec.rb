@@ -49,7 +49,6 @@ RSpec.describe UsersController, type: :controller do
       user = User.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_success
-      # p response
     end
   end
 
