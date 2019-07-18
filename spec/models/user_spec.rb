@@ -3,12 +3,23 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   it { is_expected.to be }
 
-  def setup 
-    @user = User.new(name: "Example User", email: "user@example.com")
+  it 'is a valid user' do
+    user = User.create name: "Example User", email: "user@example.com", password: 'test'
+    expect(User.all[0]).to eq(user)
   end
 
-  it 'is a valid user' do
+  it 'name has to be a valid parameter' do
+    user = User.create name: "", email: "user@example.com", password: 'test'
+    expect(User.all[0]).not_to eq(user)
+  end
 
-    expect(@user).to be(true)
+  it 'email has to be a valid parameter' do
+    user = User.create name: "Example User", email: "", password: 'test'
+    expect(User.all[0]).not_to eq(user)
+  end
+
+  it 'password has to be a valid parameter' do
+    user = User.create name: "Example User", email: "user@example.com", password: ''
+    expect(User.all[0]).not_to eq(user)
   end
 end
