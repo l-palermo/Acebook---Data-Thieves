@@ -9,6 +9,7 @@ script:
   - bundle exec rake
 deploy:
   provider: heroku
+  app: acebook-data-thieves
   api_key:
       secure: "ARwG5OfRDUlmDPpO7gQsQJoD+v4Jp/Bcm6Za7bC0MhVKXOp/UOysnDOXV5qwIo4vLxJo5cHLBx2EqL2AnxQfke4vOGTd3UkCkNJ1wHnB6n1vS7eNYPbQateh3PL428pgsfvf/y76
 u1bwMOiHxenw8SgGEal34A9KPOSFAwPWGm2vcWC/nOFsTuGNvmeUHS41sbz+9vqs+GoWcnzUX6HlfgHqYwVZf0YI0kixpWxaLICyJCnuhxh5P5aGDkiaIzjeYwrv6a6lo/MDd+sYLsgIFeGf8SR
