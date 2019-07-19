@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      @user.id
       redirect_to posts_url
     else
       render 'new'
