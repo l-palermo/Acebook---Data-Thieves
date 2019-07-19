@@ -15,5 +15,5 @@ deploy:
   on:
     repo: carlfjones/Acebook---Data-Thieves
     branch: travis_to_heroku
-  skip_cleanup: true
+  # skip_cleanup: true
   run: rake db:migrate
