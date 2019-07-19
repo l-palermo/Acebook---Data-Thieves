@@ -23,12 +23,10 @@ RSpec.describe User, type: :model do
     expect(User.all[0]).not_to eq(user)
   end
 
-
   it 'password has to be a valid parameter' do
     user = User.create name: "Example User", email: "user@example.com", password: ''
     expect(User.all[0]).not_to eq(user)
   end
-
 
   it 'password has to have length between 6-10' do
     user = User.create name: "Example User", email: "examplegmail.com", password: 'tedwhjqdowpeoidhst'
