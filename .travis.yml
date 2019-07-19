@@ -1,24 +1,19 @@
 language: ruby
 rvm:
-  - 2.5.0
+- 2.5.0
 services:
-  - postgresql
+- postgresql
 script:
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
-  - bundle exec rake
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake
 deploy:
   provider: heroku
   app: acebook-data-thieves
   api_key:
-      secure: "ARwG5OfRDUlmDPpO7gQsQJoD+v4Jp/Bcm6Za7bC0MhVKXOp/UOysnDOXV5qwIo4vLxJo5cHLBx2EqL2AnxQfke4vOGTd3UkCkNJ1wHnB6n1vS7eNYPbQateh3PL428pgsfvf/y76
-u1bwMOiHxenw8SgGEal34A9KPOSFAwPWGm2vcWC/nOFsTuGNvmeUHS41sbz+9vqs+GoWcnzUX6HlfgHqYwVZf0YI0kixpWxaLICyJCnuhxh5P5aGDkiaIzjeYwrv6a6lo/MDd+sYLsgIFeGf8SR
-I7qXqa+aapt4pSJd13Q/JG+WiG9kjc0ojAqPqZQsVg4JcOvqsrjzBkSJmMOLV7ZsnlSambx56vGIPkT//8XMvTyP6fA1kZrCZeykaIpGZU9DLgPIowC3zbwBXxoEVh/2apY8boSVek/+SzXGymI
-e+2ZGyewibhH8UsIO1Pl8Mi6xPRhH3Q+fP8ZDiRUkW90QGYsKfBkq4r5pojd/yfRmGaBwh26gxCz4Yif7LS0dZ3fRbyM+C3fkYMeIM46rIV/5Iamora0ynNRBLvmm1v52umlm8KQKdWZyQXDtDa
-DiB7Fh2E0xK4N+drOfhUN3tStlMJgvJyC6eK9N0WfdjVLcqgG90/S20kYQVfxXY/B1gnr/7xHFmIPNHNnuhOyDQO5CEd5Mr0vUveWdIxtE="
+    secure: kR+GKc0u8xwg4cVW1du2Um8ePViX1WPUqj8Hyyp7N/rqne/QsEIboA7mAgJD1Yrp0xVOtGING7vHUDTV6AhYGnhEfBrhK39qYuALeTDGS7g1vxHUbtIePJ8wHjPLUrk294f3JNv9bFL3lGQkngQLwV0lSr4GAD1Of0HWQ9f4019iA5360iQ23tNCOtBdM1GCofozIiy2MxEfgh+09G6YHnQ1rwnZLZiNQZc0bS2i6EpdAL5WnQqIQFLdIeLtDG9rVSxsgL4428XVcYPvv+B5Y9KuGvRplftsq+ulINQxa11/cqG+1FrqbLQuujdV/6lgvWfdNZGmvaPA0dtKkvO8grkXNHzfA+vqd+XNDBeDGRw8/iI6zfQjGT4s36xV0eQiSleYs0ttMhVHcCavHdbRseRihwenuq08/BSA0aFvunUtypFZxyIRdYnp7HQPijW445dmTPo2eJwES7qeMr64L6cA455HHTvTQlP0FJjkZtEKFHL+9n1dCqAlPikUS4DvIA4vnGRUrW3oqwjj5UDM7SkFdWqmNjpsDP+zTXtYG3WfiLXn4KRm2C0jtYyl9e6p9VorFyJEerwdIYCxgBKHWwOMI/SYJeGmj1jgGACPwq4QAaImfbB3MZEGCxPxSIpJb0lSLcdbmR9oQRLnK9fR7U4EzNfvv3woLCDhOIMRU8c=
   on:
     repo: carlfjones/Acebook---Data-Thieves
     branch: travis_to_heroku
   skip_cleanup: true
-  run:
-    - "rake db:migrate"
+  run: rake db:migrate
