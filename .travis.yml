@@ -19,3 +19,4 @@ DiB7Fh2E0xK4N+drOfhUN3tStlMJgvJyC6eK9N0WfdjVLcqgG90/S20kYQVfxXY/B1gnr/7xHFmIPNHN
   on:
     repo: carlfjones/Acebook---Data-Thieves
     branch: travis_to_heroku
+  skip_cleanup: true
