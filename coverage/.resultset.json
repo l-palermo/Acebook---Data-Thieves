@@ -1,11 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Celia/Desktop/projects/Acebook---Data-Thieves/app/helpers/application_helper.rb": [
+      "/Users/acfj/Projects/weekly_challenges/Acebook---Data-Thieves/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Celia/Desktop/projects/Acebook---Data-Thieves/app/controllers/posts_controller.rb": [
+      "/Users/acfj/Projects/weekly_challenges/Acebook---Data-Thieves/app/controllers/posts_controller.rb": [
         1,
         1,
         2,
@@ -27,43 +27,27 @@
         null,
         null
       ],
-      "/Users/Celia/Desktop/projects/Acebook---Data-Thieves/app/controllers/application_controller.rb": [
+      "/Users/acfj/Projects/weekly_challenges/Acebook---Data-Thieves/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/Celia/Desktop/projects/Acebook---Data-Thieves/app/models/post.rb": [
+      "/Users/acfj/Projects/weekly_challenges/Acebook---Data-Thieves/app/models/post.rb": [
         1,
         null
       ],
-      "/Users/Celia/Desktop/projects/Acebook---Data-Thieves/app/models/application_record.rb": [
+      "/Users/acfj/Projects/weekly_challenges/Acebook---Data-Thieves/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/Celia/Desktop/projects/Acebook---Data-Thieves/app/mailers/application_mailer.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/Celia/Desktop/projects/Acebook---Data-Thieves/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/Celia/Desktop/projects/Acebook---Data-Thieves/app/channels/application_cable/connection.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/Celia/Desktop/projects/Acebook---Data-Thieves/app/channels/application_cable/channel.rb": [
+      "/Users/acfj/Projects/weekly_challenges/Acebook---Data-Thieves/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1563375539
+    "timestamp": 1563543689
   }
 }
