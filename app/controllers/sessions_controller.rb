@@ -4,15 +4,19 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:password])
-
+    p login_params
+    user = User.find_by(login_params)
+    if user
+      redirect_to '/posts'
     else
       flash[:danger] = 'Invalid email/password combination'
     end
   end
 
-  def destroy
-  end
+  private
+
+    def login_params
+      params.require(:session).permit(:email, :password)
+    end
 
 end
