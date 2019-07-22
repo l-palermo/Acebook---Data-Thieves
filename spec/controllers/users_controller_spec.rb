@@ -36,6 +36,8 @@ RSpec.describe UsersController, type: :controller do
     { name: '', email: 'test@email', password: 'test'}
   }
 
+  let(:valid_session) { {} }
+
   describe "GET #new" do
     it "returns a success response" do
       get :new, params: {}, session: valid_session
