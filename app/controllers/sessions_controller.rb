@@ -4,12 +4,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    p login_params
     user = User.find_by(login_params)
     if user
+      session[:user_id] = user.id
       redirect_to '/posts'
     else
       flash[:danger] = 'Invalid email/password combination'
+      render 'new'
     end
   end
 
