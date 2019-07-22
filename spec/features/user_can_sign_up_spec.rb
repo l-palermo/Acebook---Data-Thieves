@@ -8,10 +8,6 @@ RSpec.feature "Timeline", type: :feature do
     fill_in 'user_password',  with: 'testey'
     click_button 'Create my account'
     expect(current_path).to eq('/posts')
-    
-    click_link "New post"
-    fill_in "Message", with: "Hello, world!"
-    click_button "Submit"
-    expect(page).to have_content("Hello, world!")
+    expect(page).to have_content("Welcome test you are successfully signed up")
   end
 end
