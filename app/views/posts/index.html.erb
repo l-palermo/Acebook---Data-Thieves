@@ -1,5 +1,5 @@
 <% @posts.each do |post| %>
-  <p><%= post.message%> - <%= post.created_at.to_date%></p>
+  <p><%= simple_format(post.message)%> - <%= post.created_at.to_date%></p>
 <% end %>
 <%= link_to new_post_path do %>
   New post
