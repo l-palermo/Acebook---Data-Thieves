@@ -9,6 +9,6 @@ RSpec.feature "Timeline", type: :feature do
     click_link "New post"
     fill_in "Message", with: "This is message 2"
     click_button "Submit"
-    expect(page).to have_content("This is message 2\nThis is message 1")
+    expect(page).to have_content("This is message 2 - #{Date.today.to_s}\nThis is message 1 - #{Date.today.to_s}")
   end
 end
