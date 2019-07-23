@@ -13,7 +13,8 @@ class PostsController < ApplicationController
   def index
     redirect_to '/' if session[:user_id] == nil
     @user = User.find(session[:user_id]).name if session[:user_id] != nil
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
+
   end
 
   private
