@@ -1,12 +1,13 @@
 class PostsController < ApplicationController
   def new
     redirect_to '/' if session[:user_id] == nil
+    @user = User.find(session[:user_id])
     @post = User.find(session[:user_id]).posts.new
   end
 
   def create
     redirect_to '/' if session[:user_id] == nil
-    @post = Post.create(post_params)
+    @post = User.find(session[:user_id]).posts.create(post_params)
     redirect_to user_post_path
   end
 
@@ -14,8 +15,14 @@ class PostsController < ApplicationController
     redirect_to '/' if session[:user_id] == nil
     @user = User.find(session[:user_id]).name if session[:user_id] != nil
     @posts = Post.all.order("created_at DESC")
-
   end
+
+  def show
+    redirect_to '/' if session[:user_id] == nil
+    @posts = Post.where(user_id: session[:user_id]).order("created_at DESC")
+  end
+
+
 
   private
 
