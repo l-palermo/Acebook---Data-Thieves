@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
 
+
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
-  resources :posts
+
+  get '/users/new',  to: 'users#new'
   post '/users',     to: 'users#create'
-  get '/users/new',     to: 'users#new'
+
   root 'sessions#new'
+
+  resources :users, only: [:new, :create] do
+  resources :posts
+  end
+
 end
