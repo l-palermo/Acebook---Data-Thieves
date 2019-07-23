@@ -4,5 +4,6 @@
 <% @posts.each do |post| %>
   <p><%= post.message%> - <%= post.created_at.to_date%></p>
 <% end %>
-
-
+<%= link_to user_posts_path do %>
+  See all posts
+<% end %>
