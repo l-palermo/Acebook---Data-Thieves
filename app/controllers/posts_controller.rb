@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
   def index
     redirect_to '/' if session[:user_id] == nil
-    @user = User.find(session[:user_id]).name
+    @user = User.find(session[:user_id]).name if session[:user_id] != nil
     @posts = Post.all
   end
 
