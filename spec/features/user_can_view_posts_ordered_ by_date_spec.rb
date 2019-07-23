@@ -1,8 +1,7 @@
 require 'rails_helper'
-require 'date'
 
 RSpec.feature "Timeline", type: :feature do
-  scenario "User can see the date a post was created" do
+  scenario "User can view posts ordered by date" do
     visit '/'
     fill_in 'user_name',      with: 'test'
     fill_in 'user_email',     with: 'test@test.com'
@@ -10,8 +9,11 @@ RSpec.feature "Timeline", type: :feature do
     click_button 'Create my account'
     expect(current_path).to eq('/posts')
     click_link "New post"
-    fill_in "Message", with: "Hello, world!"
+    fill_in "Message", with: "This is message 1"
     click_button "Submit"
-    expect(page).to have_content("Hello, world! - #{Date.today.to_s}")
+    click_link "New post"
+    fill_in "Message", with: "This is message 2"
+    click_button "Submit"
+    expect(page).to have_content("This is message 2 - #{Date.today.to_s}\nThis is message 1 - #{Date.today.to_s}")
   end
 end

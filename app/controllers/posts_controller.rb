@@ -1,24 +1,25 @@
 class PostsController < ApplicationController
   def new
     redirect_to '/' if session[:user_id] == nil
-    @post = Post.new
+    @post = User.find(session[:user_id]).posts.new
   end
 
   def create
     redirect_to '/' if session[:user_id] == nil
     @post = Post.create(post_params)
-    redirect_to posts_url
+    redirect_to user_post_path
   end
 
   def index
     redirect_to '/' if session[:user_id] == nil
-    @user = User.find(session[:user_id]).name
-    @posts = Post.all
+    @user = User.find(session[:user_id]).name if session[:user_id] != nil
+    @posts = Post.all.order("created_at DESC")
+
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:message)
+    params.require(:post).permit(:message, :user_id)
   end
 end
