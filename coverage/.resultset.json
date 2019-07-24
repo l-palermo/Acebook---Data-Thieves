@@ -9,22 +9,6 @@
         1,
         null
       ],
-      "/Users/ajosephides/Documents/Makers/week8/Acebook---Data-Thieves/app/models/user.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/Users/ajosephides/Documents/Makers/week8/Acebook---Data-Thieves/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/ajosephides/Documents/Makers/week8/Acebook---Data-Thieves/app/controllers/sessions_controller.rb": [
         1,
         null,
@@ -54,30 +38,27 @@
         1,
         null
       ],
-      "/Users/ajosephides/Documents/Makers/week8/Acebook---Data-Thieves/app/controllers/posts_controller.rb": [
+      "/Users/ajosephides/Documents/Makers/week8/Acebook---Data-Thieves/app/controllers/users_controller.rb": [
         1,
+        null,
         1,
-        0,
-        0,
-        0,
+        10,
         null,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
+        12,
+        12,
+        6,
+        6,
         null,
+        6,
         null,
-        1,
-        2,
-        2,
-        2,
         null,
         null,
         1,
+        null,
         1,
-        0,
+        12,
         null,
         null
       ],
@@ -86,29 +67,48 @@
         1,
         null
       ],
-      "/Users/ajosephides/Documents/Makers/week8/Acebook---Data-Thieves/app/controllers/users_controller.rb": [
-        0,
+      "/Users/ajosephides/Documents/Makers/week8/Acebook---Data-Thieves/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/ajosephides/Documents/Makers/week8/Acebook---Data-Thieves/app/models/user.rb": [
+        1,
+        1,
         null,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        1,
+        null
+      ],
+      "/Users/ajosephides/Documents/Makers/week8/Acebook---Data-Thieves/app/controllers/posts_controller.rb": [
+        1,
+        1,
+        4,
+        4,
+        4,
         null,
-        0,
         null,
-        0,
-        0,
-        0,
-        0
+        1,
+        4,
+        4,
+        4,
+        4,
+        null,
+        null,
+        1,
+        10,
+        10,
+        10,
+        null,
+        null,
+        1,
+        1,
+        4,
+        null,
+        null
       ],
       "/Users/ajosephides/Documents/Makers/week8/Acebook---Data-Thieves/app/channels/application_cable/channel.rb": [
         0,
@@ -117,6 +117,6 @@
         0
       ]
     },
-    "timestamp": 1563967563
+    "timestamp": 1563968210
   }
 }
