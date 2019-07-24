@@ -7,7 +7,7 @@ RSpec.feature "Timeline", type: :feature do
     fill_in 'user_email',     with: 'test@test.com'
     fill_in 'user_password',  with: 'testey'
     click_button 'Create my account'
-    expect(page).to have_content("Welcome test you are successfully signed up")
+    expect(page).to have_content("Welcome test")
   end
 
   scenario "Throws an error if name is missing" do

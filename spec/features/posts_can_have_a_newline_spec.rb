@@ -8,7 +8,6 @@ RSpec.feature "Format", type: :feature do
     fill_in 'user_email',     with: 'test@test.com'
     fill_in 'user_password',  with: 'testey'
     click_button 'Create my account'
-    click_link "See all posts"
     click_link "New post"
     fill_in "Message", with: "Hello, world!\nHello back at ya!"
     click_button "Submit"
