@@ -4,13 +4,12 @@ A group project, part of the makers course. The aim of the project is to practic
 The basic functionality developed so far:
 - a full CI/CD pipeline (Travis and Heroku)
 - addition of tooling for better code - Rubocop and Simplecov 
-- bare bones of a user (unauthenticated) can add a post
- 
+- a user can sign up / in
+- a view a list of posts in chronological order
+- a user can add a post
 
  *Coming features:*
- - a user can sign up / in
- - a user can add/ delete / update their own posts
- - a view a list of posts in chronological order
+ - a user can delete / update their own posts
 
 ## Technology used
 * Ruby on Rails
@@ -20,8 +19,6 @@ The basic functionality developed so far:
 
 ## To run the app:
 https://acebook-data-thieves.herokuapp.com/  
-(to add a post - https://acebook-data-thieves.herokuapp.com/post)
-
 
 ## Instructions to run locally
 Fork this repository, clone it to your local machine and run the following commands:
