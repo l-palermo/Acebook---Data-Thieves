@@ -4,7 +4,8 @@ RSpec.describe PostsController, type: :controller do
 
   describe "GET /new " do
     it "responds with 200" do
-      get :new, params: { get: { session: session[:user_id] = 2 } }
+      user = User.create(name: 'test', email: 'test@test.com', password: 'testey')
+      get :index
       expect(response).to have_http_status(200)
     end
   end
@@ -24,8 +25,7 @@ RSpec.describe PostsController, type: :controller do
   describe "GET /" do
     it "responds with 200" do
       user = User.create(name: 'test', email: 'test@test.com', password: 'testey')
-      user.id
-      get :index, params: { get: { session: session[:user_id] = user.id } }
+      get :index, params: { user_id: user.id }
       expect(response).to have_http_status(200)
     end
   end

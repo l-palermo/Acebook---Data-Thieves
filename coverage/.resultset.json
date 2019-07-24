@@ -1,60 +1,15 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Projects/Acebook---Data-Thieves/app/helpers/application_helper.rb": [
+      "/Users/remzilla/Labs/Makers/Projects/week_8/Acebook---Data-Thieves/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/student/Projects/Acebook---Data-Thieves/app/helpers/sessions_helper.rb": [
+      "/Users/remzilla/Labs/Makers/Projects/week_8/Acebook---Data-Thieves/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/Users/student/Projects/Acebook---Data-Thieves/app/controllers/users_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/student/Projects/Acebook---Data-Thieves/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/student/Projects/Acebook---Data-Thieves/app/models/user.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/Users/student/Projects/Acebook---Data-Thieves/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/student/Projects/Acebook---Data-Thieves/app/controllers/posts_controller.rb": [
+      "/Users/remzilla/Labs/Makers/Projects/week_8/Acebook---Data-Thieves/app/controllers/posts_controller.rb": [
         1,
         1,
         0,
@@ -68,9 +23,9 @@
         null,
         null,
         1,
-        2,
-        2,
-        2,
+        1,
+        1,
+        1,
         null,
         null,
         null,
@@ -81,12 +36,12 @@
         null,
         null
       ],
-      "/Users/student/Projects/Acebook---Data-Thieves/app/models/post.rb": [
+      "/Users/remzilla/Labs/Makers/Projects/week_8/Acebook---Data-Thieves/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/student/Projects/Acebook---Data-Thieves/app/controllers/sessions_controller.rb": [
+      "/Users/remzilla/Labs/Makers/Projects/week_8/Acebook---Data-Thieves/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -98,6 +53,8 @@
         1,
         1,
         null,
+        null,
+        null,
         1,
         1,
         null,
@@ -108,16 +65,60 @@
         1,
         2,
         null,
+        null
+      ],
+      "/Users/remzilla/Labs/Makers/Projects/week_8/Acebook---Data-Thieves/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        4,
+        4,
+        3,
+        3,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        4,
         null,
         null
       ],
-      "/Users/student/Projects/Acebook---Data-Thieves/app/channels/application_cable/channel.rb": [
+      "/Users/remzilla/Labs/Makers/Projects/week_8/Acebook---Data-Thieves/app/models/post.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/remzilla/Labs/Makers/Projects/week_8/Acebook---Data-Thieves/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/remzilla/Labs/Makers/Projects/week_8/Acebook---Data-Thieves/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/remzilla/Labs/Makers/Projects/week_8/Acebook---Data-Thieves/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1563894431
+    "timestamp": 1563961301
   }
 }

@@ -4,7 +4,7 @@ RSpec.describe UsersController, type: :routing do
   describe "routing" do
 
     it "routes to #new" do
-      expect(:get => "/").to route_to("users#new")
+      expect(:get => new_user_path).to route_to("users#new")
     end
 
     it "routes to #create" do
