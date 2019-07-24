@@ -18,6 +18,14 @@ class PostsController < ApplicationController
     @posts = Post.where(user_id: session[:user_id]).order("created_at DESC")
   end
 
+  def show
+    return redirect_to '/' if session[:user_id] == nil
+    @user = User.find(session[:user_id])
+    @post = Post.find(params[:id])
+  end
+
+
+
   private
   def post_params
     params.require(:post).permit(:message, :user_id)
