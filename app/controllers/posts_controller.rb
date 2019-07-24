@@ -20,7 +20,7 @@ class PostsController < ApplicationController
 
   def all
     return redirect_to '/' if session[:user_id] == nil
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   private
