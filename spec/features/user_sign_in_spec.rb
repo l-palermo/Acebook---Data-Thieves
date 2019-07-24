@@ -2,19 +2,13 @@ require "rails_helper"
 require 'sign_up_helper'
 
 RSpec.feature "User Sign In", type: :feature do
-
-  xscenario "when logged in, redirects to /posts" do
-    sign_up
-    p 'ive managed to sign up'
-
+  scenario "when logged in, redirects to /posts" do
+    user = User.create(name:"Remzilla", surname:"Kaiju", email:"test@test.com", password:"1234567")
     visit '/'
     fill_in 'session_email', with: 'test@test.com', visible: false
-    fill_in 'session_password', with: 'password', visible: false
-    p 'after filling in'
+    fill_in 'session_password', with: '1234567', visible: false
     click_button 'Log in'
-    p 'hello'
-
-    expect(page).to have_content 
+    expect(current_path).to eq("/users/#{user.id}/posts") 
   end
 
   xscenario "User gets redirected to root if he is not logged in", type: :feature do

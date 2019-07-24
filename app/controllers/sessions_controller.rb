@@ -7,8 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by(login_params)
     if user
       session[:user_id] = user.id
-      redirect_to '/login'
-      # redirect_to "/users/#{session[:user_id]}/posts"
+      redirect_to user_posts_url(user)
 
     else
       flash[:danger] = 'Invalid email/password combination'
