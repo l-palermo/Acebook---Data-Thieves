@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create] do
     resources :posts
   end
+  get '/posts', to: 'posts#all'
   root 'sessions#new'
 end
