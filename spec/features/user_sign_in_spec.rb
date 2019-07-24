@@ -11,17 +11,25 @@ RSpec.feature "User Sign In", type: :feature do
     expect(current_path).to eq("/users/#{user.id}/posts") 
   end
 
-  xscenario "User gets redirected to root if he is not logged in", type: :feature do
+  scenario "User login sees their posts", type: :feature do
+    user = User.create(name:"Remzilla", surname:"Kaiju", email:"test@test.com", password:"1234567")
+    user.posts.create(message:"Who has the keys to my Bimma?")
+    user2 = User.create(name:"Boris", surname:"Johnny", email:"anothertest@test.com", password:"itsasecret")
+    user2.posts.create(message: "I will sell you my mother for power")
     visit '/'
-    visit '/posts'
-    expect(page).to have_current_path '/'
+    fill_in 'session_email', with: 'test@test.com', visible: false
+    fill_in 'session_password', with: '1234567', visible: false
+    click_button 'Log in'
+    expect(page).to have_content('Who has the keys to my Bimma?')
+    expect(page).not_to have_content('I will sell you my mother for power')
   end
 
-  xscenario "User email validation - throws an error if no @ included", type: :feature do
-    visit '/'
-    fill_in 'session_email', with: 'test', visible: false
-    fill_in 'session_password', with: 'password', visible: false
-    click_button 'Log in'
-    expect(page).to raise_error('Please include an @ in the email address')
+  scenario "Throws an error if email is invalid" do
+      visit '/'
+      fill_in 'session_email',      with: 'test'
+      fill_in 'session_password',  with: 'testey'
+      click_button 'Log in'
+      expect(current_path).to eq('/login')
+      expect(page).to have_content('Invalid email/password combination')
   end
 end

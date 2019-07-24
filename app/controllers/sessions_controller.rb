@@ -8,7 +8,6 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       redirect_to user_posts_url(user)
-
     else
       flash[:danger] = 'Invalid email/password combination'
       render 'new'
