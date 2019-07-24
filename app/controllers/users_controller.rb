@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to "/users/#{session[:user_id]}/posts"
+      redirect_to user_post_url(@user, @user)
     else
       render 'new'
     end
