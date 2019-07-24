@@ -1,30 +1,21 @@
 class PostsController < ApplicationController
   def new
-    if session[:user_id] == nil
-      redirect_to '/'
-    else
-      @user = User.find(session[:user_id])
-      @post = User.find(session[:user_id]).posts.new
-    end
+    return redirect_to '/' if session[:user_id] == nil
+    @user = User.find(session[:user_id])
+    @post = User.find(session[:user_id]).posts.new
   end
 
   def create
-    if session[:user_id] == nil
-      redirect_to '/'
-    else
-      @user = User.find(session[:user_id])
-      @post = User.find(session[:user_id]).posts.create(post_params)
-      redirect_to user_posts_url(@user)
-    end
+    return redirect_to '/' if session[:user_id] == nil
+    @user = User.find(session[:user_id])
+    @post = User.find(session[:user_id]).posts.create(post_params)
+    redirect_to user_posts_url(@user)
   end
 
   def index
-    if session[:user_id] == nil
-      redirect_to '/'
-    else
-      @user = User.find(session[:user_id])
-      @posts = Post.where(user_id: session[:user_id]).order("created_at DESC")
-    end
+    return redirect_to '/' if session[:user_id] == nil
+    @user = User.find(session[:user_id]) if session[:user_id] != nil
+    @posts = Post.where(user_id: session[:user_id]).order("created_at DESC")
   end
 
   private
