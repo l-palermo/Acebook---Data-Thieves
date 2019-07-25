@@ -11,7 +11,7 @@ RSpec.feature "User can visit individual page", type: :feature do
     fill_in 'session_email', with: 'test@test.com', visible: false
     fill_in 'session_password', with: '1234567', visible: false
     click_button 'Log in'
-    visit '/posts'
+    click_link 'All Posts'
     click_link "I will sell you my mother for power"
     expect(current_path).to eq("/users/#{user.id}/posts/#{user2_post.id}")
     expect(page).to have_content("I will sell you my mother for power")
