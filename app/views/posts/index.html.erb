@@ -2,8 +2,13 @@
 <h3> Welcome <%=@user.name%> </h3>
 
 <% @posts.each do |post| %>
-  <p><%= simple_format(post.message)%> - <%= post.created_at.to_date%></p>
+  <p>
+  <%= link_to user_post_path(@user, post) do %>
+    <%= "#{post.message} - #{post.created_at.to_date}" %>
+  <% end %>
+  </p>
 <% end %>
+<p>
 <%= link_to new_user_post_path do %>
   New post
 <% end %>
