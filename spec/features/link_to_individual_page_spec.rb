@@ -14,5 +14,6 @@ RSpec.feature "User can visit individual page", type: :feature do
     visit '/posts'
     click_link "I will sell you my mother for power"
     expect(current_path).to eq("/users/#{user.id}/posts/#{user2_post.id}")
+    expect(page).to have_content("I will sell you my mother for power")
   end
 end
