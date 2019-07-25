@@ -1,4 +1,4 @@
-<%= flash[:danger] %>
+<%= flash[:danger] = "Error: you can\'t delete other users messages" %>
 
 <p><%= "#{@post.message} - #{@post.created_at.to_date}"%></p>
 <%= link_to user_posts_path(@user) do %>
