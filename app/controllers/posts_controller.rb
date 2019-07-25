@@ -24,7 +24,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-
+  def all
+    return redirect_to '/' if session[:user_id] == nil
+    @posts = Post.all.order("created_at DESC")
+  end
 
   private
   def post_params
