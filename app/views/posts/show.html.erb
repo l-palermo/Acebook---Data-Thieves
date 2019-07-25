@@ -1,8 +1,14 @@
+
+
+
+<%= render "layouts/header" %>
+
 <% if "#{@post.message}".include?("\n") %>
       <%= simple_format("#{@post.message} - #{@post.created_at.to_date}") %>
     <% else %>
       <%=  "#{@post.message} - #{@post.created_at.to_date}" %>
     <% end %>
+
 
 <%= link_to user_posts_path(@user) do %>
   Edit

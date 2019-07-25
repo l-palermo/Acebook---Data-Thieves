@@ -1,5 +1,15 @@
+<%= render "layouts/header" %>
 <h3> All posts</h3>
 
 <% @posts.each do |post| %>
-  <p><%= simple_format(post.message)%> - <%= post.created_at.to_date%></p>
+
+ <%= link_to user_post_path(@user, post) do %>
+ <p>
+ <% if "#{@post.message}".include?("\n") %>
+ <%= simple_format("#{@post.message} - #{@post.created_at.to_date}") %>
+<% else %>
+ <%=  "#{@post.message} - #{@post.created_at.to_date}" %>
+<% end %>
+  </p>
+<% end %>
 <% end %>
