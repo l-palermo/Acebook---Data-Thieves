@@ -10,7 +10,7 @@ RSpec.feature "User Sign Out", type: :feature do
     expect(current_path).to eq("/users/#{user.id}/posts")
     visit '/posts'
     expect(current_path).to eq("/posts")
-    click_button 'Log Out'
+    click_link 'Log Out'
     expect(current_path).to eq("/")
     visit '/posts'
     expect(current_path).to eq("/")
