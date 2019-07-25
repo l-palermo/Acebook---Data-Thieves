@@ -26,6 +26,7 @@ class PostsController < ApplicationController
 
   def all
     return redirect_to '/' if session[:user_id] == nil
+    @user = User.find(session[:user_id])
     @posts = Post.all.order("created_at DESC")
   end
 
