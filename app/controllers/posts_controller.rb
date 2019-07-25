@@ -29,6 +29,13 @@ class PostsController < ApplicationController
     @posts = Post.all.order("created_at DESC")
   end
 
+  def destroy
+    flash[:danger] = 'Invalid email/password combination' if Post.find(params[:id]).user_id != session[:user_id]
+    @user = User.find(session[:user_id])
+    Post.where(user_id: session[:user_id]).delete(params[:id])
+    redirect_to user_posts_url(@user)
+  end
+
   private
   def post_params
     params.require(:post).permit(:message, :user_id)
