@@ -1,5 +1,7 @@
 <h3> All posts</h3>
 
 <% @posts.each do |post| %>
+ <%= link_to user_post_path(@user, post) do %>
   <p><%= simple_format(post.message)%> - <%= post.created_at.to_date%></p>
+<% end %>
 <% end %>
