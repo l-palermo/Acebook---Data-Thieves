@@ -53,6 +53,9 @@ class PostsController < ApplicationController
     if @post.user_id != session[:user_id]
       flash[:danger] = "Error: you can\'t update other users messages"
       redirect_to edit_user_post_url(@user, @post)
+    elsif Time.now.utc - @post.created_at >= 600
+      flash[:danger] = "Error: you can\'t update a post since it has been 10 minutes since it was created"
+      redirect_to edit_user_post_url(@user, @post)
     else
       @post.update(post_params)
       redirect_to user_posts_url(@user)
