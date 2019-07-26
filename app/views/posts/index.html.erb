@@ -4,7 +4,7 @@
 <% @posts.each do |post| %>
   <p>
   <%= link_to user_post_path(@user, post) do %>
-    <%= "#{post.message} - #{post.created_at.to_date}" %>
+    <%= simple_format("#{post.message} - #{post.created_at.to_date}") %>
   <% end %>
   </p>
 <% end %>
