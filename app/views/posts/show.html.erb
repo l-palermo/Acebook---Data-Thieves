@@ -1,14 +1,17 @@
-
-
-<%= render "layouts/header" %>
-<%=flash[:danger]%>
+<%= render "layouts/headerUserAll" %>
+<div class='message' align='center'>
+<p><%=flash[:danger]%></p>
 <p><% if "#{@post.message}".include?("\n") %>
       <%= simple_format("#{@post.message} - #{@post.created_at.to_date}") %>
     <% else %>
       <%=  "#{@post.message} - #{@post.created_at.to_date}" %>
     <% end %></p>
+</div>
+
+
+<div class='edit' align='center'>
 <%= link_to user_posts_path(@user) do %>
-  Edit
+  Edit  
 <% end %>
-<p>
+-
 <%= link_to "Delete", user_post_url(@user, @post), method: 'DELETE'%>

@@ -1,18 +1,17 @@
-<%= render "layouts/header" %>
-<h3> Welcome <%=@user.name%> </h3>
+<%= render "layouts/headerAll" %>
 
-<% @posts.each do |post| %>
-  <p>
-  <%= link_to user_post_path(@user, post) do %>
-    <% if "#{post.message}".include?("\n") %>
+<h3 class='welcome'> Welcome <%=@user.name%> </h3>
+
+<div class='messages' >
+  <% @posts.each do |post| %>
+    <%= link_to user_post_path(@user, post) do %>
+    <p>
+   <% if "#{post.message}".include?("\n") %>
       <%= simple_format("#{post.message} - #{post.created_at.to_date}") %>
     <% else %>
       <%=  "#{post.message} - #{post.created_at.to_date}" %>
     <% end %>
+    <% end %>
+    </p>
   <% end %>
-  </p>
-<% end %>
-<p>
-<%= link_to new_user_post_path do %>
-  New post
-<% end %>
+</div>
