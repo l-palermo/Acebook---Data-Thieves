@@ -30,13 +30,6 @@ class PostsController < ApplicationController
     @posts = Post.all.order("created_at DESC")
   end
 
-  # def destroy
-  #   return @error = true if @post.user_id != session[:user_id]
-  #   @post = Post.find(params[:id])
-  #   Post.where(user_id: session[:user_id]).delete(params[:id])
-  #   redirect_to user_posts_url(@user)
-  # end
-
   def destroy
     @user = User.find(session[:user_id])
     @post = Post.find(params[:id])
@@ -45,6 +38,23 @@ class PostsController < ApplicationController
       redirect_to user_post_url(@user, @post )
     else
       Post.where(user_id: session[:user_id]).delete(params[:id])
+      redirect_to user_posts_url(@user)
+    end
+  end
+
+  def edit
+    @user = User.find(session[:user_id])
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @user = User.find(session[:user_id])
+    @post = Post.find(params[:id])
+    if @post.user_id != session[:user_id]
+      flash[:danger] = "Error: you can\'t update other users messages"
+      redirect_to user_post_url(@user, @post )
+    else
+      @post.update(post_params)
       redirect_to user_posts_url(@user)
     end
   end

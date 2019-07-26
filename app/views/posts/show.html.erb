@@ -4,7 +4,8 @@
 <%=flash[:danger]%>
 <p><%= "#{@post.message} - #{@post.created_at.to_date}"%></p>
 <%= link_to user_posts_path(@user) do %>
-  Edit
+
+<%= link_to "Edit", edit_user_post_url(@user, @post)%>
 <% end %>
 <p>
 <%= link_to "Delete", user_post_url(@user, @post), method: 'DELETE'%>
