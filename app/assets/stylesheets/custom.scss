@@ -1,11 +1,26 @@
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
+  background-color: transparent;
+  margin-left: 33.333%;
+  width: 33.333%;
   margin-bottom: 15px;
-
 }
 
 input {
   height: auto !important;
+}
+
+.row p {
+  margin-left: 33.33%;
+}
+
+.row a {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: small;
+  text-decoration: none;
+}
+
+.error_explanation {
+  margin-left: 33.33%;
 }
