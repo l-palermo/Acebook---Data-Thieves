@@ -1,0 +1,13 @@
+<header class='header'>
+  <div class='divLeft'>
+    <a><%= link_to "My Posts", user_posts_path(@user)%></a>
+    <a><%= link_to 'New post', new_user_post_path(@user)%></a>
+</div>
+  </div>
+  <div class='title'>
+  AceBook
+  </div>
+  <div class='divRight'>
+    <a><%= link_to "Log Out", logout_path, method: :delete %></a>
+  </div>
+</header>
