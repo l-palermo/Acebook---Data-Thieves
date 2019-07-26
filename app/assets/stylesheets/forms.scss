@@ -10,7 +10,10 @@ input {
   height: auto !important;
 }
 
-.row p {
+.row p label {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: small;
   margin-left: 33.33%;
 }
 
