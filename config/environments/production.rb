@@ -88,4 +88,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # upload image
+  config.serve_static_assets = true
+  config.assets.compile = true
 end
