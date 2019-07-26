@@ -35,7 +35,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.user_id != session[:user_id]
       flash[:danger] = "Error: you can\'t delete other users messages"
-      redirect_to user_post_url(@user, @post )
+      redirect_to user_post_url(@user, @post)
     else
       Post.where(user_id: session[:user_id]).delete(params[:id])
       redirect_to user_posts_url(@user)
@@ -52,7 +52,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.user_id != session[:user_id]
       flash[:danger] = "Error: you can\'t update other users messages"
-      redirect_to user_post_url(@user, @post )
+      redirect_to edit_user_post_url(@user, @post)
     else
       @post.update(post_params)
       redirect_to user_posts_url(@user)
