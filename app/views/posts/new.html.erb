@@ -1,6 +1,9 @@
-<%= render "layouts/header" %>
-<%= form_for([@user, @post]) do |form| %>
-  <%= form.label :message %>
-  <%= form.text_area :message%>
-  <%= form.submit "Submit" %>
-<% end %>
+<%= render "layouts/headerUserAll" %>
+
+<div class="row">
+  <%= form_for([@user, @post]) do |form| %>
+    <p><%= form.label :message %></p>
+    <%= form.text_area :message%>
+    <%= form.submit "Submit" %>
+  <% end %>
+</div>

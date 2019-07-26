@@ -50,15 +50,21 @@ div {
   color: green;
 }
 
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+.field_with_errors label {
+  margin-left: 33.33%;
+  // padding: 2px;
+  // width: 33.33%;
+  // display: table;
+}
+
+.field_with_errors.form-control {
+  margin-left: 33.33%;
+  // padding: 2px;
+  // width: 33.33%;
+  // display: table;
 }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
