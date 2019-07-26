@@ -1,11 +1,15 @@
-<%= render "layouts/header" %>
-
+<%= render "layouts/headerAll" %>
+<div class='message' align='center'>
 <p><%= "#{@post.message} - #{@post.created_at.to_date}"%></p>
+</div>
 
+
+<div class='edit' align='center'>
 <%= link_to user_posts_path(@user) do %>
-  Edit
+  Edit  
 <% end %>
-<p>
+-
 <%= link_to user_posts_path(@user) do %>
   Delete
 <% end %>
+</div>
