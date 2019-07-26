@@ -1,0 +1,18 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Baloo|Days+One|Lalezar|Lilita+One|Patua+One|Paytone+One|Squada+One&display=swap" rel="stylesheet">
+</head>
+
+<header class='header'>
+  <div class='divLeft'>
+    <!-- <a><%= link_to "Home", root_path %></a> -->
+    <a><%= link_to "All Posts", posts_path%></a>
+    <a><%= link_to 'New post', new_user_post_path %></a>
+  </div>
+  <div class='title'>
+  AceBook
+  </div>
+  <div class='divRight'>
+    <!-- <a><%= link_to "Log In", login_path %></a> -->
+    <a><%= link_to "Log Out", logout_path, method: :delete %></a>
+  </div>
+</header>
