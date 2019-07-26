@@ -1,0 +1,7 @@
+<%= render "layouts/headerUserAll" %>
+<%=flash[:danger]%>
+<%= form_for([@user, @post], method: 'PATCH') do |form| %>
+  <%= form.label :message %>
+  <%= form.text_area :message%>
+  <%= form.submit "Update" %>
+<% end %>
