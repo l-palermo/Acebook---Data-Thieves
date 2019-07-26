@@ -1,7 +1,11 @@
 <%= render "layouts/headerUserAll" %>
 <div class='message' align='center'>
 <p><%=flash[:danger]%></p>
-<p><%= "#{@post.message} - #{@post.created_at.to_date}"%></p>
+<p><% if "#{@post.message}".include?("\n") %>
+      <%= simple_format("#{@post.message} - #{@post.created_at.to_date}") %>
+    <% else %>
+      <%=  "#{@post.message} - #{@post.created_at.to_date}" %>
+    <% end %></p>
 </div>
 
 
