@@ -13,7 +13,11 @@
   text-decoration: none;
 }
 
-.messages {
+.messages a {
+  text-decoration: none;
+}
+
+.messages p {
   margin-left: 2%;
   font-family: Helvetica;
   font-weight: bold;
@@ -22,8 +26,15 @@
   color: #000000;
 }
 
-.messages a:hover {
+.messages p:hover, p:active {
   background-color: transparent;
+  text-decoration: none;
+  color: rgb(2, 117, 10);
+}
+
+.messages a:hover, a:active {
+  background-color: transparent;
+  text-decoration: none;
   color: rgb(2, 117, 10);
 }
 
