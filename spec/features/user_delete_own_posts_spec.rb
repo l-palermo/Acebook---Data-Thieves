@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Timeline", type: :feature do
 
-  scenario "Can submit posts and view them" do
+  scenario "User can delete is own posts" do
     visit '/users/new'
     fill_in 'user_name',      with: 'test'
     fill_in 'user_email',     with: 'test@test.com'
@@ -17,7 +17,7 @@ RSpec.feature "Timeline", type: :feature do
     expect(page).not_to have_content('Hello')
   end
 
-  scenario "Can submit posts and view them" do
+  scenario "User cannot delete other's posts" do
     visit '/users/new'
     fill_in 'user_name',      with: 'test'
     fill_in 'user_email',     with: 'test@test.com'
