@@ -8,8 +8,5 @@
 <%= link_to user_posts_path(@user) do %>
   Edit  
 <% end %>
--
-<%= link_to user_posts_path(@user) do %>
-  Delete
-<% end %>
-</div>
+<p>
+<%= link_to "Delete", user_post_url(@user, @post), method: 'DELETE'%>
