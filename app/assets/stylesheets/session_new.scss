@@ -1,0 +1,60 @@
+body {
+  background-image: url(land.jpg);
+  height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0%;
+}
+
+.header {
+  overflow: hidden;
+  background-color: rgba(134, 182, 132, 0.822);
+}
+
+.divLeft a {
+  float: left;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: large;
+  padding: 0.85%;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.title {
+  font-family: Helvetica;
+  font-weight: bolder;
+  font-size: 27px;
+  float: none;
+  position: absolute;
+  left: 45%;
+  padding: 0.85%;
+  color: #ffffff;
+}
+
+.divRight a {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: large;
+  float: right;
+  padding: 0.85%;
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.divRight  a:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.divLeft  a:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.header a.active {
+  background-color: transparent;
+  color: white;
+}
