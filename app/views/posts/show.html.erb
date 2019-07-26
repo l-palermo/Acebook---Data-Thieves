@@ -2,7 +2,11 @@
 
 <%= render "layouts/header" %>
 <%=flash[:danger]%>
-<p><%= "#{@post.message} - #{@post.created_at.to_date}"%></p>
+<p><% if "#{@post.message}".include?("\n") %>
+      <%= simple_format("#{@post.message} - #{@post.created_at.to_date}") %>
+    <% else %>
+      <%=  "#{@post.message} - #{@post.created_at.to_date}" %>
+    <% end %></p>
 <%= link_to user_posts_path(@user) do %>
   Edit
 <% end %>
