@@ -5,7 +5,11 @@
 
  <%= link_to user_post_path(@user, post) do %>
  <p>
-  <%= "#{post.message} - #{post.created_at.to_date}" %>
+ <% if "#{post.message}".include?("\n") %>
+ <%= simple_format("#{post.message} - #{post.created_at.to_date}") %>
+<% else %>
+ <%=  "#{post.message} - #{post.created_at.to_date}" %>
+<% end %>
   </p>
 <% end %>
 <% end %>
