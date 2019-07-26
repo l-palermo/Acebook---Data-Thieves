@@ -39,6 +39,7 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
+  gem 'timecop'
 end
 
 group :development do

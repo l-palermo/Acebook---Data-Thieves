@@ -11,7 +11,8 @@
 
 <div class='edit' align='center'>
 <%= link_to user_posts_path(@user) do %>
-  Edit  
+ 
+<%= link_to "Edit", edit_user_post_url(@user, @post)%>
 <% end %>
 -
 <%= link_to "Delete", user_post_url(@user, @post), method: 'DELETE'%>
