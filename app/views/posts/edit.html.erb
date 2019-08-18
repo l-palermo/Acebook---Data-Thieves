@@ -1,6 +1,6 @@
 <%= render "layouts/headerUserAll" %>
 <div class="row">
-<%=flash[:danger]%>
+<p><%=flash[:danger]%></p>
 <%= form_for([@user, @post], method: 'PATCH') do |form| %>
   <p><%= form.label :message %></p>
   <%= form.text_area :message%>
