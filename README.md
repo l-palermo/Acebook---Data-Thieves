@@ -32,3 +32,7 @@ Fork this repository, clone it to your local machine and run the following comma
 > bin/rails server
 ```
 
+To run test, type:
+```
+> rspec
+```
